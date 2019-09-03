@@ -10,9 +10,14 @@ class Coordinate {
     this.y = y;
   }
 
+  setCoord(coord) {
+    this.x = coord.x;
+    this.y = coord.y;
+  }
+
   get() {
-    let cords = {x: this.x, y: this.y};
-    return cords;
+    let coords = {x: this.x, y: this.y};
+    return coords;
   }
 
 }

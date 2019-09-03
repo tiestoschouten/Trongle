@@ -15,8 +15,8 @@ class Trail {
     this.coordinates.push(new Coordinate(x, y));
   }
 
-  updateLastCord(x, y) {
-    this.coordFollow = this.coordinates[this.coordinates.length-1].set(x, y);
+  updateLastCoord(coord) {
+    this.coordFollow = this.coordinates[this.coordinates.length-1].setCoord(coord);
   }
 
   draw() {
@@ -25,7 +25,7 @@ class Trail {
     this.ctx.strokeStyle = this.color;
 
     this.ctx.lineJoin = "miter";
-    this.ctx.miterLimit = 5;
+    this.ctx.miterLimit = 1;
 
     let start = this.coordinates[0].get();
     this.ctx.moveTo(start.x, start.y);
